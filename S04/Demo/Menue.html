@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }  
+        /* negative spacing */
+
+        #mainmenue{
+            text-align: center;
+            padding: 5px;
+        }
+       #mainmenue>li{
+    display:inline-block;
+    width: 100px;
+    padding: 10px;
+    margin:10px;
+    background-color: lightblue;
+    font:bold 10px tahoma;
+       }
+
+        #mainmenue>li:hover{
+            background-color: blue;
+            color:white;
+            cursor:pointer
+        }
+
+        #contactmenue{
+       display: none;
+        }
+
+        #ContactLi:hover #contactmenue{
+            display:block;
+        } 
+
+        #ContactLi{
+            position:relative;
+        }
+        #contactmenue{
+            position:absolute;
+            color:black;
+            top:100%;
+            left:0;
+            text-align: center;
+            width: 100%;
+        }
+        #contactmenue>li{
+            list-style: none ;
+            padding:10px;
+            background-color:lightblue
+        }
+         #contactmenue>li:hover{
+            background-color: darkblue;
+            color:white;
+         }
+    </style>
+</head>
+<body>
+    
+
+    <ul id="mainmenue">
+   <li>Home</li>
+
+   <li id="ContactLi">
+    Contact  
+    <ul id="contactmenue">
+        <li>FaceBook</li>
+        <li>Email</li>
+        <li>Mobil</li>
+    </ul>
+</li>
+
+   <li>About</li>
+    </ul>
+
+
+    <!-- 3 types for hiding element:
+     1- Opacity:0;بيحجز مكان العنصر وبيخلي العنصر شفاف يعني مش مخفي
+     for show element: opacity:1 
+
+     2- visibality:hidden  بيحجز مكان العنصر ولكن بيخفي العنصر
+     for show: visibality:visible
+
+     3- display:none : بتخفي العنصر ومش بتحجز مكانه
+     for show: display: block;
+
+
+
+     // block , inline , inline block 
+     display:inline-block
+      -->
+</body>
+</html>

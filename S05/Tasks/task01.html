@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task01</title>
+
+    <script>
+        var sum=0;
+
+        while(true)
+        {
+            var num = Number(prompt(`Enter a number and to add the sum = ${sum} finish enter 0`));
+
+            if(isNaN(num)){
+                alert("enter a valid number");
+            }
+            else
+            {
+                sum+=num;
+                if(num == 0 || sum >=100){
+                    break;
+                }
+            }
+        }
+
+        alert(`the sum of numbers is ${sum}`)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

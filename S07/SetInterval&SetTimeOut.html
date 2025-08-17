@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+     
+     function DisplayTime(){
+           var today=new Date();
+        document.title=today.toLocaleTimeString();
+     }
+   
+
+     function StartTimer(){
+      t= setInterval("DisplayTime()" ,1000)
+     }
+
+     function StopTimer(){
+        clearInterval(t)
+     }
+
+    c= setTimeout("alert('hello')" ,2000)
+
+     clearTimeout(c)
+
+
+    </script>
+</head>
+<body>
+   
+    <input type="button" value="Start" onclick="StartTimer()"/>
+
+    <input type="button"  value="Stop"  onclick="StopTimer()"/>
+</body>
+</html>

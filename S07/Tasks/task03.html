@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task03</title>
+</head>
+<body>
+    <h1>Typing message</h1>
+    <hr>
+    <button onclick="openTypingWindow()">Click Me</button>
+
+<script>
+    function openTypingWindow() {
+        let newWin = window.open("", "", "width=500,height=300");
+
+        newWin.document.write("<div id='output' style='font-size:24px; white-space:pre-wrap;'></div>");
+
+        let text = "Hi welcome in iti course";
+        let i = 0;
+
+        function typeChar() {
+            let output = newWin.document.getElementById("output");
+            output.innerText += text.charAt(i);
+            i++;
+            if (i < text.length) {
+                setTimeout(typeChar, 300);
+            }
+        }
+
+        typeChar();
+    }
+</script>
+
+</body>
+</html>

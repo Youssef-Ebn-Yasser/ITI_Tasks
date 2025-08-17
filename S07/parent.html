@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body bgcolor="yellow">
+    <h2 style="text-align: center">From Parent</h2>
+    <input type="button" value="OpenChild" onclick="openChild()" />
+    <input type="button" value="CloseChild" onclick="CloseChild()" />
+ <input type="button" value="ScrollChild" onclick="ScrollChild()" />
+  <input type="button" value="MoveChild" onclick="MoveChild()" />
+    <script>
+      //open("url" , "target" , "options"): return refrence to opened window(child)
+      var child;
+      function openChild() {
+        child = open('child.html', '', 'width=500 , height=500');
+      }
+
+      function CloseChild() {
+      child.close();
+      }
+
+//scroll to 
+// scroll by
+      function ScrollChild(){
+        child.scrollTo(0,50);
+        child.focus()
+      }
+
+
+      //moveto
+      //moveby
+
+      function MoveChild(){
+child.moveBy(300,30)
+ child.focus()
+      }
+    </script>
+  </body>
+</html>

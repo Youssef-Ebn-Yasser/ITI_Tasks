@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <script>
+
+  class Person{
+
+    constructor(_id, _name){
+    //  console.log(new.target.name)
+
+    if(new.target.name=="Person"){
+        throw new Error("You Cannot Create An Explict Object From Abstract Class!")
+    }
+        this.Id=_id;
+        this.Name=_name
+    }
+
+    Print(){
+        return `ID : ${this.Id} , Name:${this.Name}`
+    }
+}
+
+class Student extends Person{
+  constructor(_id, _name , _intake){
+      super(_id,_name);
+        this.Intake=_intake;
+    }
+
+    Print(){
+        return `${super.Print()}, Intake:${this.Intake}`
+    }
+
+}
+
+class Employee extends Person{
+    constructor(_id, _name , _salary){
+        super(_id,_name);
+        this.Salary=_salary;
+    }
+
+    Print(){
+        return `${super.Print()}, Salary:${this.Salary}`
+    }
+}
+
+
+let pone=new Person(10,"Ahmed")
+let stdone=new Student(1,"Ali" ,45)
+let Empone=new Employee(2,"Omar" ,10000)
+
+let staffArr=[stdone,Empone,"Ahmed" ,true ,70]
+
+for(let i=0;i<staffArr.length;i++){
+    if(staffArr[i] instanceof Person )
+    console.log(staffArr[i].Print())
+}
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

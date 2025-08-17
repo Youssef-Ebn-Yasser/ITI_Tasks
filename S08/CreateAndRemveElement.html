@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 250px;
+            height: 200px;
+        }
+        input[type='button']{
+            background-color: blue;
+            color: white;
+            width: 100px;
+            height: 30px;
+            margin: 5px;
+           border: none;
+        }
+        .even{
+background-color: lightblue;
+        }
+        .odd{
+background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+  
+   <input type="text" />
+</br>
+
+<input type="button" value="Add" onclick="AddContent()"/>
+<input type="button" value="Remove" onclick="RemoveContent()"/>
+
+<div>
+
+</div>
+
+
+    <script>
+//1-get user input 
+// 2- create element p
+//3-set inner text inside p with user input
+//4- select div then append p tag inside it
+var i=1;
+function AddContent(){
+     var userInput=  document.getElementsByTagName('input')[0].value;
+    var createdp=  document.createElement('p') //<p></p>
+    createdp.innerText=userInput;
+      if(i%2==0){
+   createdp.setAttribute('class' ,'even')
+    }else{
+      createdp.setAttribute('class' ,'odd')  
+    }
+    createdp.setAttribute('id' , 'ist'+i)
+     i++;
+  
+ 
+    document.querySelector('div').appendChild(createdp)
+}
+
+function RemoveContent(){
+    // remove() : target
+    var targetp=document.getElementsByTagName('p')[0]
+    // targetp.remove();
+    //removechild: caller:parent (node)
+var divone=document.querySelector('div')
+ divone.removeChild(targetp)
+  i--;
+}
+
+
+    </script>
+</body>
+</html>

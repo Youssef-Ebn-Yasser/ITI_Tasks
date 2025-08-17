@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+//2Models:1- Browser Object Model:
+//2- Document object Model
+
+var employee={
+id:1,
+Firstname:"Alaa",
+print:function(){
+    return this.id , this.name
+},
+address:{
+    city:"cairo",
+    street:"stone",
+    code:12333
+}
+
+}
+
+// for in 
+
+for(var key in employee){
+    console.log(key +"   "+employee[key] )
+}
+
+for(var w in window){
+   document.write(w +" :"+ window[w] +"</br>")
+}
+
+
+function student(){
+    console.log(this)
+}
+student()
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

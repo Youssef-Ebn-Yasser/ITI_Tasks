@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task01</title>
+
+    <script>
+        // 1
+        class Shape {
+        #color; 
+
+        constructor(color) {
+            this.#color = color;
+        }
+
+
+        get Color() {
+            return this.#color;
+        }
+
+        set Color(newColor) {
+            this.#color = newColor;
+        }
+
+
+        DrawShape() {
+            console.log(`the shape color: ${this.#color}`);
+        }
+        }
+
+
+        // 2
+            class Rectangle extends Shape {
+            constructor(color, width, height) {
+                super(color); 
+                this.width = width;
+                this.height = height;
+            }
+
+            getArea() {
+                this.DrawShape();
+                return this.width * this.height;
+        }
+            }
+
+            // 3
+        class Square extends Rectangle {
+        constructor(color, side) {
+            super(color, side, side);
+        }
+        }
+
+        // 4
+        class Circle extends Shape {
+        constructor(color, radius) {
+            super(color);
+            this.radius = radius;
+        }
+
+        getArea() {
+            this.DrawShape();
+            return Math.PI * this.radius ** 2;
+        }
+        }
+
+        let width = 0;
+        do {
+            width =Number(prompt(`enter the width`));
+        }while(isNaN(width) || width===String);
+
+        let height = 0;
+        do {
+            height =Number(prompt(`enter the height`));
+        }while(isNaN(height) || height===String);
+
+        const rect = new Rectangle("Red",width, height);
+        console.log("Rectangle Area:", rect.getArea());
+
+        const square = new Square("Blue", width);
+        console.log("Square Area:", square.getArea());
+
+        const circle = new Circle("Green", width);
+        console.log("Circle Area:", circle.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

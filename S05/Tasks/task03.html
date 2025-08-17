@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task03</title>
+
+
+</head>
+<body>
+    
+</body>
+    <script>
+
+        // 4.1
+        do {
+            number = Number(prompt("Enter a number:"));
+            initalRidix = Number(prompt("Enter initial ridex:"));
+            finalRidix = Number(prompt("Enter a final ridex:"));
+        } while (isNaN(number) || isNaN(initalRidix) || isNaN(finalRidix)); 
+        
+        var decimal = parseInt(number, initalRidix);
+        var result = decimal.toString(decimal);
+
+        console.log(result)
+
+        //4.2
+        let input = Number(prompt("Enter a number:"));
+
+        console.log("english format:", input.toLocaleString("en-US"));
+        console.log("arabic format:", input.toLocaleString("ar-EG"));
+        
+        //4.3- 
+        var arr = [10.2, 20, 34, 333.12345];
+
+        for (let index = 0; index < arr.length; index++) {
+            console.log(arr[index].toFixed(6))
+        }
+
+        // 4.4
+        var t1=new Number(10); 
+	    var t2= new Number(10);
+
+        var x1=9;
+        var x2=9;
+
+        console.log(x1==x1);
+	    console.log(t1==t2);
+	    console.log([1,2,3]==[1,2,3])
+
+    </script>
+</html>

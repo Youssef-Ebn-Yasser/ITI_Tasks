@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+
+
+
+// Property : length 
+// Methods :
+// 1- manipulate string 
+// 	- charAt(index) , indeOf() , lastIndexOf() , substring , substr , slice , split , replace , 
+// 2- format string
+
+mystr="ITI Tanta Branch"
+
+mystr.length;
+mystr.charAt(0);
+
+// to cut from string:
+//substring(start,end?):end not include
+console.log( mystr.substring(0,3))
+console.log( mystr.substring(0)) // end is the length of string
+console.log( mystr.substring(-9)) //zero
+console.log( mystr.substring(-9,6))
+console.log( mystr.substring(5,1)) //swap 
+console.log( mystr.substring(6,-1))
+//substr(startpos,length)//length is number of steps
+console.log( mystr.substr(4,5)) 
+console.log( mystr.substr(4,0)) //not swap
+console.log( mystr.substr(-6)) 
+console.log( mystr.substr(-6 , 3)) 
+//slice(startpos,end?):end not include
+console.log( mystr.slice(0,3))
+console.log( mystr.slice(-3)) // بيبدأ من الاخر(اخر 3 حروف)
+console.log( mystr.slice(5,1)) // not allow swap (' ')
+/////////////////////////////////
+//indexof
+console.log(mystr.indexOf('@')) // return -1 if char not exist
+console.log(mystr.indexOf('n',7))
+
+//lastindexOf
+console.log(mystr.lastIndexOf('n'))
+
+
+///////////////
+
+console.log(mystr.substring(mystr.indexOf('Ta') ,mystr.lastIndexOf('B') ) )
+
+////////////////////////////////////////////
+
+//Replace:
+console.log(mystr.replace("a" , '@'))
+
+//replaceAll: 
+console.log(mystr.replaceAll("A" , '@'))
+//////////////////////////////////////////////
+//method chainning
+
+console.log(mystr.bold().italics().fontcolor("red"))
+
+// document.write(mystr.bold().italics().fontcolor("red"))
+
+/////////////////////////////////////////////
+
+//split: return array
+
+console.log(mystr.split('$'))
+//////////////////////////////////
+//tolowercase
+console.log(mystr.toLowerCase())
+console.log(mystr.toUpperCase())
+
+/////////////////////////////////////////
+
+var str="ITI Smart Branch"
+
+var result="";
+for(var i=0;i<str.length;i++){
+  if(str[i].toLowerCase()==str[i]){
+  result+=  str[i].toUpperCase();
+  }else  result+= str[i].toLowerCase()
+    
+}
+str=result;
+
+console.log("After Loop   " + str)
+
+////////////////////////////////////////////////////
+// document.write("<pre>")
+// document.writeln("Hello   ")
+// document.writeln("World ")
+// document.write("</pre>")
+
+ document.writeln("Hello </br>   ")
+
+ document.writeln("World ")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// type coercion
+var x=10;
+var y="test"
+// implict converion
+
+x+y // convert implicity number to string  then conacat 
+
+x*y  // convert string to number
+
+// strict equality (===) : equality type+value
+
+
+// explict conversion : parseInt - ParseFlaot- Number-(+)
+
+
+// types of dialog (alert , confirm , prompt)
+
+//alet():undefined 
+//  result=  alert("Hello")
+
+ // prompt : will return string (click ok ) or null (click cancel or esc)
+
+//  res=prompt("Enter FN" , "5");
+
+
+// confirm : return boolean (true : click ok) false:cancel
+
+// res=  confirm("Are You Sure?!")
+do{
+var FN= parseInt(prompt("Enter FN " ,"5"))
+}
+ while(isNaN(FN))
+
+do{
+var SN= parseInt(prompt("Enter SN" ,"10"))
+} while(isNaN(SN))
+var res=parseInt(FN)+parseInt(SN)
+
+alert("Sum=" + res)
+
+
+//Nan: not a number
+
+//special value in js . not equal anything
+// typeof Nan : NUmber
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

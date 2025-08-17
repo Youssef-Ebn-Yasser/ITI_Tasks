@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 2px solid black;
+            padding:10px;
+            margin:10px auto;
+            
+        }
+        .mainwrapper{
+            width:700px;
+            /* position:relative; */
+
+        }
+        .internalwrapper{
+            width:500px;
+            text-align: center;
+            /* position:relative;  */
+        }
+        p{
+            border:1px solid black;
+            margin:10px;
+            width:300px;
+            padding:10px;
+            text-align: center;
+        }
+        .relative{
+            background-color: blue;
+            color:white;
+            position: relative;
+            top:30px;
+            left:10px
+        }
+        .absolute{
+             background-color: rgb(233, 75, 199);
+              position:absolute;
+              bottom:30px;
+              right:30px
+        }
+
+        .fixed{
+            background-color: rgb(106, 143, 212); 
+            position:fixed;
+            top:80px;
+            left:30px;
+        }
+
+        .static{
+            background-color: blueviolet;
+            color:white;
+            position:static;
+            top:20px;
+            left:20px
+        }
+    </style>
+</head>
+<body>
+   
+    
+ <!-- position : by default any element has position static  -->
+    <!--  position types: 
+      1-position relative:  (top-bottom-right-left)  move from the old place
+      2-absolute: relative sccording to the first relative parent
+      3- fixed:according to body direct 
+      4-sticky(css3)
+           -->
+
+<div class="mainwrapper">
+    <div class="internalwrapper">
+        <p class="relative">Relative</p>
+        <p class="absolute">Absolute</p>
+        <p class="fixed">Fixed</p>
+        <p class="static">Static</p>
+    </div>
+
+ </div>
+
+</body>
+</html>

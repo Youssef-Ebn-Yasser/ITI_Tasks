@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task02</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    h2 span {
+      color: blue;
+    }
+    .container {
+      width: 400px;
+      margin: 20px auto;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      border: 5px solid gold;
+    }
+    .controls {
+      margin-top: 15px;
+      align-content: center;
+    }
+    .controls button {
+      margin-right: 10px;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
+    .prev, .next {
+      background: orange;
+      font-weight: bold;
+    }
+    .play {
+      background: green;
+    }
+    .stop {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><span>Slide Show</span> Game</h2>
+
+  <div class="container">
+    <img id="slide" src="../UP/2.jpg" width="400" height="400" alt="slideshow">
+    
+    <div class="controls">
+      <button class="btn prev" onclick="prevImage()">&lt;</button>
+      <button class="btn play" onclick="playSlideshow()">Play</button>
+      <button class="btn stop" onclick="stopSlideshow()">Stop</button>
+      <button class="btn next" onclick="nextImage()">&gt;</button>
+    </div>
+  </div>
+
+  <script>
+    var images = [
+        "../UP/2.jpg",
+        "../UP/1.jpg",
+        "../UP/10.jpg",
+    ];
+
+    var index = 0;
+    var slide = document.getElementById("slide");
+    var interval = null;
+
+    function showImage() {
+      slide.src = images[index];
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    function playSlideshow() {
+      if (interval) return;
+      interval = setInterval(nextImage, 1000); 
+    }
+
+    function stopSlideshow() {
+      clearInterval(interval);
+      interval = null;
+    }
+  </script>
+
+</body>
+</html>

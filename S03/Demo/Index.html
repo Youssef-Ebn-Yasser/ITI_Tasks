@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link href="Tstyle.css" rel="stylesheet" />
+    <style>
+      #pone,
+      h2 {
+        color: red;
+      }
+
+      .htwo {
+        background-color: rgb(194, 194, 119);
+      }
+      .mainwrapper {
+        background-color: gray;
+        padding: 20px;
+      }
+      .wrapper {
+        background-color: lightblue;
+      }
+
+      .mainwrapper > p {
+        color: crimson;
+      }
+
+      .wrapper > p {
+        color: green;
+      }
+
+      input[type='text'] {
+        background-color: blue;
+        padding: 5px;
+        margin: 10px;
+      }
+
+      p[class$='two'] {
+        border: 2px solid black;
+        padding: 5px;
+      }
+
+      h2[class^='ht'] {
+        border: 1px solid orangered;
+      }
+      p[id*='on'] {
+        background-color: rgb(189, 199, 216);
+        letter-spacing: 5;
+        word-spacing: 8;
+      }
+
+      #pone:hover {
+        background-color: cornflowerblue;
+        color: white;
+        cursor: pointer;
+      }
+
+   
+      input[type='email']:focus {
+        background-color: cornflowerblue;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+         input[type='email']:active {
+        background-color: rgb(168, 29, 98);
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- 3 ways to write css :  -->
+    <!--  1- external style:  -->
+    <!--2- internal style using style tag-->
+    <!-- 3- inline style : using style attribute -->
+    <!-- Rule Base in css: 
+ selector {
+ property: value;
+ } -->
+
+    <!-- selector: element that seleted to be styled -->
+    <!--selectors types-->
+    <!-- 1-Tag Name 
+  2-id selector : # id name
+  3-class selector: . classname
+  4-group selector : h2 , p
+  5- heriracal selector 
+  6-attribute selector:[=: equality, $=: end with , ^=:start with , *= : contains]
+  7- interaction selector: (psoudo class selector: hover , active , focus=> in input)
+  8-universal selector : *{}
+  -->
+    <h2 class="htwo"  id="pone">HTML</h2>
+    <p id="pone">HTML IS standard markup language for creating web pages</p>
+    <h2>CSS</h2>
+    <!-- <p style="color: blueviolet">css is cascading style sheet</p> -->
+    <p class="ptwo">css is cascading style sheet</p>
+    <!-- inline : high priority than external and internal  , !importnat : the highst priority -->
+
+    <div class="mainwrapper">
+      <p>MarkUP Language</p>
+      <!--direct child  divname > p-->
+      <div class="wrapper">
+        <p>HTML</p>
+        <!--indirect child for mainwrapper   divname   p-->
+        <p>CSS</p>
+      </div>
+    </div>
+
+    <input type="text" placeholder="Enter Name" />
+    <input type="email" placeholder="Enter Email" />
+
+
+
+
+    <!-- specifity:*:0  , tagName:1,#id:100 class:10 -->
+  </body>
+</html>

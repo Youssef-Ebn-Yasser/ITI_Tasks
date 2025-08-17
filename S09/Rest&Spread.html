@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        // rest : ...arr
+        // any function has one and only one rest
+        // must be the formal last parameter
+         // you have to pass sperated values in this func
+
+        // function getResult(op){
+        //    let result=0;
+        //    switch(op) {
+        //     case"+":
+        //     for(let i=1; i<arguments.length;i++){
+        //        result+= arguments[i]
+        //     }
+        //      break;
+
+        //      case"*":
+        //      result=1;
+        //       for(let i=1; i<arguments.length;i++){
+        //        result*= arguments[i]
+        //     }
+        //    }
+
+        //    return result;
+        // }
+
+
+     let getResult= (op , ...arr)=> eval(arr.join(op)) //rest
+        
+
+
+   let arr1=[1,23,4,20,6,9]
+
+     console.log( getResult("+",...arr1)) //spread
+
+     ///////////////////////////////////////////////////////////
+
+     //destruction (object , array)
+
+     // destruction with object
+     let myobj={
+        id:100,
+        Name:"Ahmed",
+        addrress:"Alex"
+     }
+//1- in case of equality(naming variables and namesprop)
+console.log(myobj.id)
+console.log(myobj.Name)
+console.log(myobj.addrress)
+// let {id,Name}=myobj;
+
+let id , Name;
+({id , Name}=myobj)
+
+// 2- Not equality(naming variables and namesprop)
+
+//personId 
+//Personname
+
+let {id:personId,Name:PersonName}=myobj;
+let {addrress:Address}=myobj
+
+
+//////////////////////
+
+//array Destruction:
+let myArr=[10,20,30,40,50]
+let[ Fn , ,ThirdN, ...dn]=myArr
+////////////////////////////////////////////////
+
+
+//Concise function: function must be written inside object or class only
+ let obj={
+        id:100,
+        Name:"Ahmed",
+        addrress:"Alex",
+       // Print: function(){return this.id , this.Name}
+       Print(){return this.id , this.Name}
+     }
+
+    console.log(obj.Print())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

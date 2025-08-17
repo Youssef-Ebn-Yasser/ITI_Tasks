@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+
+// var myarr=[1,2,3,"ahmed" ]
+
+var arr=new Array(4,5,6,8,7)
+
+// to add value in array (append , prepend , between)
+// 1-push : add value at the last : return new length 
+//2-unshift: add value at the start : return length 
+//3- splice(index , 0, values inserted): add value between values in array , return empty array
+
+console.log(arr.push(3))
+console.log(arr.unshift("Ali"))
+console.log(arr.splice(1,0,2,3))
+
+/////////////////////////////////////////////////////////////////
+
+//Remove data from array:
+//pop: remove data at the end  : return deleted element
+//shift: remove element at the first: return deleted element 
+//splice(index,2)
+
+console.log(arr.pop())
+console.log(arr.shift())
+console.log(arr.splice(1,2))
+
+///////////////////////////////////////////////////////////
+//filter
+var myarr=[1,2,3,4,5,6,7,8,9]
+
+function IsEven(val){
+    if(val%2==0) return true;
+    else  return false;
+}
+
+// EvenNumbers=myarr.filter(IsEven)
+// OddNumbers=myarr.filter(
+// function IsOdd(val){
+//     if(val%2!=0) return true;
+//     else  return false;
+// }
+// )
+
+OddNumbers=myarr.filter(
+function IsOdd(val){
+    return val%2!=0;
+}
+ 
+)  // Anymous Function
+
+console.log(OddNumbers)
+
+/////////////////////////////
+//forEach:
+OddNumbers.forEach( 
+function (val){
+    console.log(val)
+}
+);
+
+for(var i=0; i<OddNumbers.length;i++){
+    console.log(OddNumbers[i])
+}
+
+
+/////////////////////////////////
+
+//sort
+var myarr2=[-100,26,-4,5,6,1,8,-10]
+console.table(myarr2)
+// console.table(myarr2.sort())
+
+// function comparison(a,b){
+//     if(a>b) return -100;
+//     else if(a<b) return 10;
+//     else  return 0;
+// }
+function comparison(a,b){
+    return b-a;
+}
+ console.log(myarr2.sort(comparison))
+////////////////////////////////////
+
+// every
+var test=  myarr.every(function(val){
+    return val%2==0;
+})
+
+console.log(test)
+
+////////////////////////////////////
+//reduce:
+
+var sum = myarr.reduce(function(a,b){
+    return a+b;
+},100)
+
+var namesarr=["Ahmed" ,"Ali" ,"Mostafa" , "Mohamed"]
+console.log(namesarr.reduce(function(a,b){
+    return a+=b;
+}).length)
+
+////////////////////////////////
+
+//map
+var emailarr=namesarr.map(function(val){
+    return val+"@gmail.com"
+})
+
+////////////////////////////
+
+//slice
+
+var arr2=[1,20,30,55,7,68]
+var myarr3=arr2.slice()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

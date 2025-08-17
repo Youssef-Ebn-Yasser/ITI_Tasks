@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+
+        // 2 types of function:
+        //1- function statement 
+
+        //function declaration
+        function Sum(){
+           //function body
+           return 10;
+        }
+
+         function Sum(x,y){
+           
+           return x+y;
+        }
+     console.log( Sum(10,20) )   //function Calling
+
+//NO overloading:
+
+// in any Function : Arguments , this
+
+// arguments: like array , has length ,doesnot contain methods array
+
+function myfun(x,y,z){
+  var result=0;
+    for(var i=0; i<arguments.length;i++){
+        result+=arguments[i]
+    }
+return result;
+}
+
+console.log(myfun())
+console.log(myfun(10,20))
+console.log(myfun(10,20,30))
+console.log(myfun(10))
+
+
+//this: refer to caller
+
+var id=5;
+var name="Ahmed"
+var student={
+    id:10,
+    name:"Ali",
+    Print: function(){
+        return "ID:" +this.id , "Name:"+this.name
+    }
+}
+
+console.log(student.Print())
+
+//2-function Expression:function Name is Optional
+
+var SayHello=function (){
+    return"Hello From Function"
+}
+
+console.log(SayHello())
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

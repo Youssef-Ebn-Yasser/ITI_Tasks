@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+
+var x; //undefined
+var x="iti"
+x=5
+console.log(x)
+
+//y  //error: not defined
+y=5
+y="iti"  
+y=true
+
+console.log(y)
+
+var str=new String("iti")  // type : object
+var str1="iti"  //type: string
+
+console.log(typeof str)
+console.log(typeof str1)
+
+
+var varone=10;  //literal declaration : type:Number
+var myvarone=new Number(10)  //constructor declaration :object
+
+var myvartwo=new Number(20)
+
+
+myvarone=myvartwo 
+
+myvarone=new Number(5)
+console.log(myvartwo)
+
+/**********************************************/
+// 2 Scopes in js(ES5)
+//1-script scope/global scope
+
+//two cases for global scope
+
+ var x=5;
+ y="iti"   // when you declare variable without var you must initialize it   
+//global scope
+//1- when you declare variable inside script at first level using var or without var
+
+
+//2- when you declare variable inside function without var 
+
+function myfun(){
+     frommyvar=5;
+    console.log("hello from iti")
+}
+
+console.log( myfun())
+
+console.log(frommyvar)
+
+
+// local scope or function scope
+//whe you declare variable inside function using var
+
+
+function myfun2(){
+    var test="Ahmed"
+    console.log(test)
+}
+
+myfun2()
+//  console.log(test)  //refrence error : not defined 
+
+
+//Not Block Scope
+ for(var i=0;i<10;i++){
+    console.log(i)
+ }
+ console.log(i)  //10
+
+
+///////////////////////////////////////////////////////////////////////////
+//Number:
+//2Ways to declare Number: literal declaration -constructor declaration 
+
+var mynum=10; //literal
+
+var mynum2=new Number(10)  //Constructor declaration
+
+
+function Sum(x,y){
+
+    // if(typeof x=="number" && typeof y=="number"){
+    // return x+y;
+    // }
+
+    if(x.constructor.name=='Number' && y.constructor.name=='Number'){
+      return x+y;  
+    }
+   return "NOT Valid"
+
+   //return; :undefined
+}
+
+console.log(Sum(10,new Number(20)))
+
+//////////////////////////////////
+
+var x=10.25;
+var y=40;
+
+console.log( x.toFixed())
+
+console.log(x)
+console.log( y.toPrecision(4))
+
+/////////////////////////////
+//literals for numbers
+
+var num=1024;  //decimal
+var num=0b100;  //binary 
+var num=0o100;  //octal
+var num=0x400; //hexadecimal
+
+var num=1e5
+
+Number.isInteger(10.4)
+
+Number.isFinite(10,0)
+
+
+    </script>
+  
+</head>
+<body>
+<!--    
+<p id="pone">ITI</p>     -->
+
+
+
+
+
+
+
+
+    <!-- <script>
+
+// alert("Hello From Alert!")
+
+// document.getElementById("pone").innerText="TantaBranch"
+
+    </script> -->
+<!-- <script src="BasicJS.js"></script>  1- external script -->
+</body>
+</html>

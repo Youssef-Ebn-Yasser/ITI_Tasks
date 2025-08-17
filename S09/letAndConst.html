@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script>
+        //let & const : Block Scope
+
+        //let & const in hoisting: hoistion without declaration 
+    
+    // console.log(x) //error:cannot access it before initialization
+        let x=10;
+        console.log(x)
+
+
+        let z; //undefined
+        console.log(z)
+
+        // cannot redeclare let in the same scope but can reintialize
+
+        let s=5;
+        s="mynum"
+
+     let d=1000;
+    if(5>2){
+     // console.log(d) //error
+         let d=100;
+         console.log(d)
+        }
+
+
+     // console.log(v)
+        const v=5;
+        console.log(v)
+
+
+       // cannot redeclare and reintialize const in the same scope  
+        const y=7;
+           // y=10;
+
+        //    for (const i=0;i<10;i++){
+        //     console.log(i)
+        //    } // 0 then error
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task02</title>
+
+    <script>
+        var name = "ali mohamed";
+        let newName = "";
+
+        for (let index = 0; index < name.length; index++) {
+            if (index == 0 || name[index - 1] == " ") {
+                newName += name[index].toUpperCase();
+            } else {
+                newName += name[index];
+            }
+        }
+
+        console.log(newName);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

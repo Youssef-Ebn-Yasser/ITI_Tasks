@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task02</title>
+</head>
+<body>
+
+    <div id="countdown">10</div>
+
+<script>
+    var counter = 10;
+
+    // Array of background images (10 images for each second)
+    var images = [
+        "../UP/1.jpg",
+        "../UP/1.jpg",
+        "../UP/2.jpg",
+        "../UP/3.jpg",      
+        "../UP/4.jpg",
+        "../UP/5.jpg",      
+        "../UP/6.jpg",
+        "../UP/7.jpg",      
+        "../UP/8.jpg",
+        "../UP/9.jpg",      
+        "../UP/10.jpg"
+    ];
+
+    function updateCountdown() {
+        document.getElementById("countdown").innerText = counter;
+
+
+        document.body.style.backgroundImage = `url('${images[10 - counter]}')`;
+        document.body.style.backgroundSize = "cover";
+
+        if (counter === 0) {
+            clearInterval(timer);
+            window.close(); // closes current window
+        }
+
+        counter--;
+    }
+
+    let timer = setInterval(updateCountdown, 1000);
+
+
+    updateCountdown();
+</script>
+
+</body>
+</html>

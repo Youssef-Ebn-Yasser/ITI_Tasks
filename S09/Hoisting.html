@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+
+// hoisting 
+//var x; //undefined
+console.log(x);
+var x=10;
+console.log(x);
+
+//console.log(t)
+function myfun(){
+    console.log(t) //
+    var t=30;
+    console.log(t)
+}
+myfun()
+
+console.log(i)//undefined
+for(var i=0;i<10;i++){
+    console.log(i)
+}
+ 
+console.log(i)
+
+// function statement and function expression in hoisting
+// statement will be hoisted totaly
+
+fun1()
+function fun1(){
+    console.log("Hello from Fun1")
+}
+
+
+// function expression
+
+var myfun1;//undefined
+//myfun1(); //error(variable is not a function)
+
+var myfun1=function myfun(){
+    console.log(10)
+}
+myfun1();
+///////////////////
+console.log(Foo())
+function Foo(){
+      return Bar()//eror
+    var Bar=function(){
+        return 10;
+    }
+
+  
+}
+
+console.log(Foo())//10
+
+
+
+
+
+
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

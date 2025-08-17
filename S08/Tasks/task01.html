@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task01</title>
+<style>
+    h1 span{
+        color: #2b7de9;
+    }
+    .stars {
+        font-size: 24px;
+        color: gold;
+        margin: 10px 0;
+    }
+    .section {
+        margin-bottom: 50px;
+    }
+    .section div{
+        display: inline;
+        width: 300;
+        height: 300;
+
+    }
+    .section .input {
+        background-color: red;
+        color: white;
+    }
+    .section .output {
+        background-color: green;
+        color: white;
+
+    }
+    .section div {
+        border: 1px solid green;
+        width: fit-content;
+        padding: 10px;
+        display: inline;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" style="text-align: center;">
+    <h1><span>Bottle</span> Game</h1>
+    <div class="stars">★ ★ ★</div>
+    <img src="../UP/1.jpg" width="300" height="300"  alt="">
+
+    <p>Write a function that takes an array of persons' names and returns two random names of them.</p>
+
+    <div class="section" style="margin-top: 90px;">
+        <div class="input">Input Array</div>
+        <div id="input">["ahmed", "islam", "sandra", "Fatma", "Ali"]</div>
+    </div>
+
+    <div class="section">
+        <div class="output">Output</div>
+        <div id="output">[]</div>
+    </div>
+</div>
+
+<script>
+    function pickRandom() {
+        var input = document.getElementById("input").innerText;
+        var arr = JSON.parse(input);
+
+
+        var firstIndex = Math.floor(Math.random() * arr.length);
+        var secondIndex;
+        do {
+          secondIndex = Math.floor(Math.random() * arr.length);
+        } while (secondIndex === firstIndex);
+
+        var result = [arr[firstIndex], arr[secondIndex]];
+        document.getElementById("output").innerText = JSON.stringify(result);
+    }
+
+    pickRandom();
+</script>
+
+</body>
+</html>

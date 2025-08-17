@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task03</title>
+
+    <script>
+
+        var repeate =0;
+
+        do {
+        var arr=[];
+
+        var arrLenght =0;
+
+        do{
+            arrLenght =Number(prompt("please enter array lenght")) ;
+        }while(isNaN(arrLenght));
+
+
+        for (let index = 0; index < arrLenght; index++) {
+
+            do{
+                var number =Number(prompt(`please enter Number ${index+1}`)) ;
+            }while(isNaN(number));
+
+            arr[index] = number;
+        }
+
+        var evenArr =[];
+        var i=0;
+        for (let index = 0; index < arrLenght; index++) {
+            if(arr[index] % 2 == 0){
+                evenArr[i] = arr[index];
+                i++;
+            }
+        }
+
+        var discountArr =[];
+
+        for (let index = 0; index < arrLenght; index++) {
+                discountArr[index] = arr[index] *.3;
+        }
+
+        do{
+            num =Number(prompt("please enter number to divide")) ;
+        }while(isNaN(num));
+
+        var isDivisableArr =[];
+        var i=0;
+
+        for (let index = 0; index < arrLenght; index++) {
+            if(arr[index] % num ==0) {
+                isDivisableArr[i] = arr[index];
+                i++;
+            }
+        }
+
+        var concatString="";
+        for (let index = 0; index < arrLenght; index++) {
+            if(index == arrLenght-1) {
+                concatString += arr[index];
+            }else{
+                concatString += arr[index]+"***";
+            }
+        }
+
+        console.log(`array    ${arr}`)
+        console.log("reverse order"+ arr.reverse())
+        console.log("order asce"+arr.sort())
+        console.log("order desc"+arr.sort((a,b)=>b-a))
+        console.log(`even array   ${evenArr}`)
+        console.log(`Discount 30% array   ${discountArr}`)
+        console.log(`is Divisable array   ${isDivisableArr}`)
+        console.log("concat string=>" +concatString)
+
+        alert(`even number ${evenArr}`)
+
+        var repeate= Number(prompt("want to finish enter 0 else enter 1"));
+        }while(repeate);
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

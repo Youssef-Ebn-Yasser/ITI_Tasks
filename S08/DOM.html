@@ -1,0 +1,87 @@
+
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .hidden{
+            visibility: hidden;
+        }
+        .iti{
+            text-decoration: underline;
+            color: red;
+            font-weight: bold;
+
+        }
+
+        .active{
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+        .one{
+            background-color: blueviolet;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- collections(images,links,forms)=>access them direct -->
+     <!-- Getters :
+      1-getelementById:return element or null(in case of missing element)
+      2-getelementsByTagName=>return array or emptyarray
+      3-getelementsByclassName=>return array or emptyArray
+      -->
+      <!-- css selectors:
+       1-queryselector:
+       2-queryselectorAll 
+       -->
+
+       <!-- update content inside tag: add tags
+
+       1-innertext:add text only not tags , doesnot access hidden elements
+
+       2-innerhtml:add tags and elements
+
+       3-textcontent:add text only not tags , access hidden element
+         -->
+       <!-- to access value in inputs only=> attribute (value) -->
+
+       <!-- 2 types for adding class css:
+        1- className: 
+        2- classList(add-remove-toggle) -->
+
+    <!--DOM  -->
+    <div id="done">
+        <p>Hello</p>
+        <h4>Header4</h4>
+        <h2 class="hidden">Header2</h2>
+    </div>
+    <img src="UP/1.jpg"/>
+    <form id="fromone" >
+        <input type="text"/>
+        <input type="password"/>
+        <select>
+            <option>ONE</option>
+              <option>TWO</option>
+                <option>THREE</option>
+                  <option>Four</option>
+        </select>
+    </form>
+     <form id="fromone" >
+        <input type="text"/>
+        <input type="password"/>
+        <select>
+            <option>ONE</option>
+              <option>TWO</option>
+                <option>THREE</option>
+                  <option>Four</option>
+        </select>
+    </form>
+     <img src="UP/1.jpg"/>
+
+     <a href="#" class="aone">Google</a>
+     </br>
+     <a href="#" class="aone">FaceBook</a>
+</body>
+</html>

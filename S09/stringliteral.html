@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+//string literal
+
+//`` backtic
+
+//'' single quate
+
+let mystr=`"ITI"`
+
+console.log(mystr)
+
+// string interplotion ${}
+
+let fnum=10
+let snum=5;
+// let myres=`FirstNum=${fnum} , SecondNum=${snum}`
+
+
+function getRandom(){
+    return Math.floor(Math.random()*100)
+}
+
+let myres=`FirstNum=${getRandom()} , SecondNum=${getRandom()} , Result=${getRandom()+getRandom()}`
+
+console.log(myres)
+
+///////////////////////////////////////
+
+//default parameter
+
+function getres(){
+   return 10;
+}
+
+function mysum(x,y=getres(),z=y*2){
+    return x+y+z
+}
+
+console.log(mysum(10 ,20)) 
+///////////////////////////////////////////
+
+//Arrow Function : doesnot contain arguments 
+
+// you have to call it as function expression 
+
+
+let sum=(a,b)=> a+b;
+let sum2=(a,b)=>{console.log("Summition of A, B:") ; return a+b}
+let myfun= a=>{console.log(a)}
+let fun1= ()=>Math.random();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        // class: userdefined type 
+        // using keyword:class ClassName
+        //fields:attributes:id ,Name (public , private)
+        //public field: declare inside constructor using this
+        //private field(hashedField)=> define inside class direct using #
+        // you cannot declare variables insude class using let , const , var
+        //methods: (instance methods (object methods) , type method (static method ) )
+
+
+        //features of class:
+        //class must be declared using class keyword
+        // you cannot create object from class before declare it
+        // 2 types for creating class: class statement class Person{} , class expression  let person=class{}
+        // to create object you must use new keyword  let pone=new Person()
+        // properties => special case from method like accessor (get , set) =>declare it as method and deal with it as field
+      
+        class Person{
+       #id=1 ;
+       #name="new Person" ;
+            constructor(_id , _name){
+                // this.Id=_id;
+                // this.Name=_name;
+                if(_id>0){
+                  this.#id=_id;
+                }
+
+                if(_name.trim().length>=3){
+                  this.#name=_name
+                }
+            }
+
+
+            SetId(_id){
+                // if(_id<0) {this.Id=10}
+                // else{
+                //     this.#id=_id
+                // }
+ 
+                if(_id>0) {  this.#id=_id}
+            }
+
+            GetId(){
+               return this.#id
+            }
+
+            SetName(_name){
+                if(_name.trim().length>=3) { this.#name=_name;}
+               
+            }
+
+            GetName(){
+                return this.#name;
+            }
+
+
+            // properity:protection like method , easy of usage like field
+           
+            set  ID(_id){
+                if(_id>0){
+                    this.#id=_id;
+                }
+              }
+
+
+            get  ID(){
+                return  this.#id;
+              }
+
+
+            //pone.ID=-1;
+            //pone.ID
+/////////////////////////////////////////
+
+        set  Name(_name){
+            
+                if(_name.trim().length>=3) { this.#name=_name;}
+           }
+
+           get Name(){
+            return this.#name;
+           }
+
+            // instance Method
+
+            Print(){
+            //    return `ID:${this.Id} , Name:${this.Name}` 
+            //   return `ID:${this.#id} , Name:${this.#name}` 
+             return `ID:${this.ID} , Name:${this.Name}` 
+            }
+
+
+            // type method:
+          static  GetIdentity(){
+                return "Hello From Person Class!"
+            }
+        }
+
+        // object
+        let pone =  new Person(-1, "");
+                // pone.Id=-2;
+                // pone.Name=""
+            //pone.#name;
+            // pone.SetId(-1," ")
+
+            pone.ID=7;
+          console.log(pone.ID)
+        //   console.log(pone.GetId())
+    // console.log(pone.Id)
+    // console.log(pone.Name)
+    console.log(pone.Print())
+    // console.log(pone.GetIdentity())
+    let ptwo=new Person(5,"Ali")
+     console.log(ptwo.Print())
+//    console.log(ptwo.GetIdentity())
+
+ console.log( Person.GetIdentity())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+    #mainwrapper{
+        width:500px;
+        border: 2px solid black;
+        padding:10px;
+        margin:10px auto;
+        text-align: center;
+    }   
+
+    #imgwrapper{
+        width: 400px;
+        margin: 10px;
+        border: 2px solid pink;
+        border-radius: 20px;
+    }
+   
+    #controls{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    input{
+        width: 100px;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 10px;
+
+    }
+input:focus{
+    background-color: pink;
+}
+
+    </style>
+</head>
+<body>
+ 
+    
+    <div id="mainwrapper">
+        <div id="imgwrapper">
+            <img src="UP/1.jpg" alt="img" id="myimg" width="350" height="300"/>
+        </div>
+        <div id="contorls">
+            <input type="button"  value="Start"  onclick="StartShow()"/>
+             <input type="button" value="Next" onclick="NextImg()" />
+              <input type="button"  value="Previous" onclick="PreviousImg()"/>
+               <input type="button"  value="Stop" onclick="StopShow()"/>
+        </div>
+
+    </div>
+
+    <script>
+var imagesArr=["UP/2.jpg","UP/3.jpg","UP/4.jpg","UP/5.jpg" ,"UP/6.jpg","UP/7.jpg","UP/8.jpg"]
+
+i=0;
+function NextImg(){
+    i++;
+    if(i>=imagesArr.length) i=0;
+
+    myimg.src=imagesArr[i]
+}
+
+function PreviousImg(){
+i--;
+
+if(i<0) i=imagesArr.length-1
+
+ myimg.src=imagesArr[i]
+}
+
+
+ function StartShow(){
+   t= setInterval("NextImg()" , 1000)
+ }
+
+ function StopShow(){
+    clearInterval(t);
+ }
+
+    </script>
+</body>
+</html>

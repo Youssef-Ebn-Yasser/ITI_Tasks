@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task</title>
+
+    <script>
+
+        //1
+let numbers = [10, 80, 25, 60, 3, 99, 45, 70];
+
+let ascending = numbers.sort((a, b) => a-b);
+console.log("Ascending:", ascending);
+
+let descending = numbers.sort((a, b) => b - a);
+console.log("Descending:", descending);
+
+let largerThan50 = numbers.filter(n => n > 50);
+console.log("Numbers > 50:", largerThan50);
+
+let max = Math.max(...numbers);
+let min = Math.min(...numbers);
+console.log(`Max: ${max}, Min: ${min}`);
+
+
+//2
+function calculate(operator, ...nums) {
+    let result;
+
+    switch (operator) {
+        case "sum":
+            result = 0;
+            for (let i = 0; i < nums.length; i++) {
+                result += nums[i];
+            }
+            break;
+
+        case "sub":
+            result = nums[0];
+            for (let i = 1; i < nums.length; i++) {
+                result -= nums[i];
+            }
+            break;
+
+        case "mul":
+            result = 1;
+            for (let i = 0; i < nums.length; i++) {
+                result *= nums[i];
+            }
+            break;
+
+        case "div":
+            result = nums[0]; 
+            for (let i = 1; i < nums.length; i++) {
+                result /= nums[i];
+            }
+            break;
+
+        default:
+            console.log("Invalid operator");
+            return;
+    }
+
+    console.log(`Result of ${operator} operation for ${nums.join(", ")} is ${result}`);
+}
+
+// Example call
+calculate("sum", 3, 1, 6, 3); 
+calculate("sub", 10, 3, 2);  
+calculate("mul", 2, 3, 4);   
+calculate("div", 100, 2, 5);
+
+// 3
+let projectId;
+do {
+    projectId = prompt("Enter Project ID must be a number");
+} while (isNaN(projectId) || projectId.trim() === "");
+
+let projectName;
+do {
+    projectName = prompt("Enter Project Name cannot be empty");
+} while (projectName.trim() === "");
+
+let duration;
+do {
+    duration = prompt("Enter Project Duration in months, must be a positive number");
+} while (isNaN(duration) || duration <= 0);
+
+const project = {
+    projectId,
+    projectName,
+    duration,
+    printData() {
+        console.log(`Project ID: ${this.projectId}, Name: ${this.projectName}, Duration: ${this.duration} months`);
+    }
+};
+
+project.printData();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
