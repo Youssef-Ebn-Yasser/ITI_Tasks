@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task01</title>
+
+
+    <script type="module">
+    import Shape from "/shapeModule.js";
+    import { Rectangle, Square } from "/SquaresModule.js";
+    import Circle from "/CircleModule.js";
+
+    const rect = new Rectangle("Red", 10, 5);
+    const square = new Square("Blue", 7);
+    const circle = new Circle("Green", 4, 0, 0);
+
+    console.log(`Rectangle Area: ${rect.getArea()}`);
+    console.log(`Square Area: ${square.getArea()}`);
+    console.log(`Circle Area: ${circle.getArea()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

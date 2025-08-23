@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+// local Storage: setItem ,getItem
+
+myobj={
+    id:1,
+    Name:"Ahmed"
+}
+
+// Json.stringfy(): convert object to json
+// json.parse(): convert json  to object
+
+stinfyObj=JSON.stringify(myobj)
+localStorage.setItem("obj1" , stinfyObj)
+ParseObj=JSON.parse(stinfyObj)
+//console.log(localStorage.getItem("obj1"))
+/////////////////////////////////////
+// Fetch : return Promise 
+//Fetch API: Ajax Call from server
+
+
+async function DisplayAPI(){
+    let allpostsjson=  await fetch("https://jsonplaceholder.typicode.com/posts/")
+
+    let allposts    =   await  allpostsjson.json()
+    allposts.forEach(function(val){
+        document.write(`<li>${val.title} </li>`)
+    });
+                          
+}
+DisplayAPI()
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

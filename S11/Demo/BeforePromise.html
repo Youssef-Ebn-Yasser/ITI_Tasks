@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+function getAllStudents(){
+    setTimeout(function(){
+        let allstd=[{id:1, name:"stdone"} , {id:2, name:"stdtwo"},{id:3, name:"stdthree"},{id:4, name:"stdfour"}]
+
+        return allstd;
+    } , 2000)
+}
+
+
+function DisplayAllStudents(_allstd){
+setTimeout(function(){
+    console.log("From Display Students")
+    _allstd.forEach(function(std){
+        console.log(`Students : Id:${std.id} , Name:${std.name}`)
+    });
+    
+let allDepts=[{deptId:1 , deptName:"DeptOne"} , {deptId:2 , deptName:"DeptTwo"},{deptId:3 , deptName:"Deptthree"}]
+return allDepts;
+ } , 2000)
+
+}
+
+
+
+function DisplayAllDepartment(_alldept){
+  setTimeout(function(){
+    console.log("From Display Departments")
+    _alldept.forEach(function(dept){
+        console.log(`Departments : Id:${dept.deptId} , Name:${dept.deptName}`)
+    });
+    
+let allManagers=[{MgrId:1 , mgrName:"managerOne"} , {MgrId:2 , deptName:"managerTwo"},{MgrId:3 , deptName:"managerThree"}]
+return allManagers;
+ } , 2000)  
+}
+
+function DisplayALLManagers(_allmgrs){
+   setTimeout(function(){
+    console.log("From Display Managers")
+    _allmgrs.forEach(function(mgr){
+        console.log(`Managers : Id:${mgr.MgrId} , Name:${mgr.mgrName}`)
+    });
+
+ } ,2000 )
+      
+}
+
+
+// calling:
+
+let std=getAllStudents();
+let depts= DisplayAllStudents(std);
+ let mgrs=  DisplayAllDepartment(depts)
+
+DisplayALLManagers(mgrs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

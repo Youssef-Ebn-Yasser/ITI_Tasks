@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task02</title>
+<style>
+    .card {
+        width: 300px;
+        background: #fff;
+        border: 2px solid black;
+    }
+
+    .card img.flag {
+        width: 100%;
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+    .region {
+        color: gray;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .info span {
+        margin-left: 8px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="Box"></div>
+
+
+
+<script>
+    async function getCountryData(countryName) {
+
+
+        const response = await 
+        fetch(`https://restcountries.com/v2/name/${countryName}`);
+
+
+        const data = await response.json();
+        const country = data[0];
+
+        const population = (country.population / 1_000_000).toFixed(1) + " M People";
+
+
+        const language = country.languages[0].name;
+        const currency = country.currencies[0].name;
+
+        const box = document.getElementById("Box");
+
+        box.innerHTML = `
+        <div class="card">
+            <img class="flag" src="${country.flag}" alt="Flag of ${country.name}">
+            <div class="card-content">
+            <h2>${country.name}</h2>
+            <div class="region">${country.region}</div>
+            <div class="info">👨‍👩‍👧 <span>${population}</span></div>
+            <div class="info">🗣️ <span>${language}</span></div>
+            <div class="info">💰 <span>${currency}</span></div>
+            </div>
+            </div>
+        `;
+    }
+
+    let countryName =prompt("enter countery")
+
+    getCountryData(countryName);
+</script>
+</body>
+</html>

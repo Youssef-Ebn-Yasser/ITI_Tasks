@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+// promise : 3cases:
+//pending : resolve (fulfillled) , reject
+
+function Fun1(){
+ 
+    return new Promise((resolve , reject)=>{
+    setTimeout(function(){
+         //resolve (["Ahmed" ,"Ali" ,"Omar" ,"Mohamed"])
+       reject('IAm Sorry!!')
+    } ,2000)
+  
+    })
+   
+}
+
+//then: in case of (resolve or fullfiled)
+//catch: in case of reject
+
+let result=Fun1().then(function(data){
+    console.log(data)
+}).catch (function(message){
+    console.log(message)
+})
+
+console.log(result)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

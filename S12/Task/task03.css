@@ -1,0 +1,30 @@
+section {
+    margin-top: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+.lines {
+    width: 200px;
+    margin: 0 auto;
+}
+.lines hr {
+    background-color: red;     
+    
+}
+.upper,.lower{
+    width: 50%;
+    height: 1px;          
+}
+.center {
+    height: 1px;    
+} 
+.feature {
+    float: left;
+    text-align: center;
+    margin-left: 100px;
+}
+.feature p {
+    width: 400px;
+}

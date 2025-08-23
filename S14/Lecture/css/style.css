@@ -1,0 +1,107 @@
+/* *
+{
+    box-sizing: border-box;
+} */
+.parent{
+    width: 1000px;
+    height: 900px;
+    background-color: #09c;
+    overflow: auto;
+    margin:100px auto;
+    /* padding: 10px; */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /*justify-content affect x axix if flex direction row */
+    /*justify-content affect y axix if flex direction column */
+   /* justify-content: space-between;  */  
+    /*align items affect x axix if flex direction column */
+    /*align items affect y axix if flex direction row */
+   /* align-items:last baseline; */
+   /* flex-flow: row wrap; */
+   /* justify-content: center;
+   align-items: center; */
+}
+.child
+{
+    flex-basis: 300px;
+    width: 300px;
+    /* height: 200px; */
+    /* display: inline-block; */
+    /* float: left; */
+    box-sizing: border-box;
+  
+}
+.sub
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.one
+{
+    background-color: red;
+    /* padding: 1px; */
+    /* border: 1px solid red; */
+    /* margin: 1px; */
+    /* padding: 10px; */
+    /* flex-shrink: 0; */
+    flex-grow: 1;
+}
+.two
+{
+    background-color: rgb(5, 68, 204);
+    /* flex-shrink: 1; */
+    flex-grow: 0;
+}
+.three
+{
+    background-color: rgb(200, 6, 129);
+    /* flex-shrink: 3; */
+    flex-grow: 0;
+}
+/* .four
+{
+    background-color: rgb(55, 183, 4);
+    flex-shrink: 1;
+} */
+/* .five
+{
+    background-color: black;
+    flex-shrink: 1;
+} */
+
+.test
+{
+    width: 300px;
+    height: 300px;
+    background-color: #09c;
+    /* animation-name: myAnimation;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    /* animation-direction: alternate; */
+    /* animation-iteration-count: infinite;  */
+}
+ /* div p:first-of-type
+{
+    color: red;
+}
+div p:last-of-type
+{
+    color: green;
+} */
+div p:nth-child(even)
+{
+    color: green;
+}
+ /* div p:nth-child(1)
+{
+    color: red;
+} */
+/* @keyframes myAnimation {
+    50%{transform: translateX(900px);}
+    75%{transform: translateY(300px);}
+    /* 50%{transform: translateX(-300px);} */
+    /* 75%{transform: translateY(-300px);} */
+    100%{background-color: red;}
+} */

@@ -1,0 +1,73 @@
+body {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0,.6);
+}
+
+
+nav {
+    margin: 20px;
+    align-content: center;
+}
+
+
+.logo {
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+}
+
+
+.active {
+    color: red;
+}
+
+
+li {
+    padding: 10px;
+    margin-right: 20px;
+    color: white;
+    list-style: none;
+    font-size: 24px;
+    display: inline-block;
+}
+
+
+li:hover {
+    color: red;
+}
+
+
+ul{
+    float: right;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+
+section {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    align-content: center;
+    margin-top: 200px;
+    font-weight: 900;
+}
+
+
+p {
+    color: white;
+    font-size: 48px;
+
+}
+
+
+h1 {
+    color: red;
+    font-size: 60px;
+
+}

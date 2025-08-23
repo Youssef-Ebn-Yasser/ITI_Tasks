@@ -1,0 +1,64 @@
+section{
+    margin: 20px 200px;
+}
+
+
+.clearfix{
+    clear: both;
+}
+
+
+.image {
+    float: left;
+}
+
+
+.content {
+    margin-left: 400px;
+    float: left;
+}
+
+
+.content span {
+    color: red;
+}
+
+
+.summary {
+    width: 600px;
+    line-height: 1,6;
+    font-size: 32px;
+}
+
+
+.left,.right {
+    line-height: .5;
+    font-size: 24px;
+}
+
+
+.left {
+    float: left;
+    margin-left: 50px;
+}
+
+
+.right {
+    float: right;
+}
+
+
+button {
+    background-color: rgb(199, 26, 193);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+button:hover {
+    background-color: rgb(110, 5, 5);
+}
+
+.hire {
+    margin-left: 50px;
+}
