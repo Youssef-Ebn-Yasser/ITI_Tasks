@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    background-image: url('/1.jpeg');
+    height: 500px;
+}
+
+@media (max-width:969px) {
+    .box {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width:467px) {
+    .btns {
+        flex-direction: column;
+    }
+}
+
+.btn,.footer {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
