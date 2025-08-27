@@ -1,0 +1,9 @@
+-Make Your own Datatype & use it
+-Create array that accept numbers only and print them .
+-Create array that accept string or number and print them
+-Create array that accept string and number and print them.
+-Create function with default parameters
+-Create function with optional parameters
+-Create function with two parameter try to call it without any parameter 
+- Make Enum for ITIBranches that contain group of branches
+-- Try to get The Branches names in console
