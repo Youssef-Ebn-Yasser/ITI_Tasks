@@ -1,0 +1,30 @@
+<div class="container mt-5 mb-5">
+  <div class="row g-4">
+    @for(product of filteredproductList ; track product.id) {
+
+    <div class="col-4" >
+      <div class="card" appShadow style="width: 18rem;">
+        <img [src]="product?.imageUrl" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Name : {{product?.name}}</h5>
+          <p class="card-text">Price :{{product?.price}}</p>
+          @if(product?.quantity == 1){
+            <p class="text-warning">last item</p>
+          }
+          @else if (product?.quantity == 0) {
+            <p class="text-danger">out of the stock</p>
+
+          }
+          @else {
+          <p class="card-text">Quantity :{{product?.quantity}}</p>
+          }
+          <input type="text" [value]="requiredQuantity" [value]="0" min="1" #quantityInput>
+          <button class="btn btn-info ms-2" (click)="buy(product,quantityInput.value)">buy</button>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+
+

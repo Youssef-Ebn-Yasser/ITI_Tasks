@@ -1,0 +1,19 @@
+
+<div class="container text-center">
+  <label for="" class="form-label">---Category---</label>
+  <select class="form-control" [(ngModel)]="selectedCategoryId">
+    <option value="0" selected>All</option>
+    @for(cat of categoryList ; track cat.id){
+      <option [value]="cat.id">{{cat.name}}</option>
+    }
+  </select>
+</div>
+
+<div class="text-center mt-2">
+
+  <h2>Total Price {{totalPrice}}</h2>
+</div>
+
+<app-product-card [selectedCategoryId]="selectedCategoryId" (totalePriceChange)="onTotalPriceChanged($event)"></app-product-card>
+
+
